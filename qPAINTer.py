@@ -452,7 +452,7 @@ Cell = qPAINT(exposure_time = 0.1,
                     data_path = "./testfiles/testfile_2.hdf5",
                     dbclusters_path = "./testfiles/testfile_3.hdf5",
                     ignore_dark = 5, #In units of frames
-                    prompt_cutoff = False,
+                    prompt_cutoff = True,
                     title_0 = "Sample Cell",
                     title_1 = "Calibration",
                     title_2 = "Counting",
@@ -464,3 +464,24 @@ Cell.Count(screen_picks = True, std_factor = 2, std_cutoff = 4000, show_screenin
 #Cell.Discuss()
 Cell.DiscussWithSizes()
 Cell.SpatialPlot(display = True, cluster_size_cutoff=10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
