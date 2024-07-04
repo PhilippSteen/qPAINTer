@@ -56,14 +56,14 @@ def CalculateBright(bursts): #Calculates the lengths of the bright times
 
 def CalculateDark(bursts): #Calculates the lengths of the dark times
     darks = []
-    last = 0
+    previous_first = 0
     for entry in bursts:
         first = entry[0]
-        difference = first-last
-        last = entry[-1]
+        difference = first-previous_first
+        previous_first = first
         darks.append(difference-1)
     return(darks[1:]) #The first entry is discarded, as it is just the time from the start of the measurement until the first bright segment
-        
+         
 def LinkLocalizations(group, ignore_dark, ignore_bright):
     bursts = DetermineBursts(group, ignore_dark)
     bursts = RemoveShortBrights(bursts, ignore_bright)
