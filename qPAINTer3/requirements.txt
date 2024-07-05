@@ -1,0 +1,8 @@
+itertools
+operator
+multiprocessing
+numpy==1.21.2
+pandas==1.4.4
+pandarallel==1.6.3
+yaml==0.2.5
+matplotlib==3.4.3
