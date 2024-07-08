@@ -127,3 +127,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+qPAINTer3/main_copy.py

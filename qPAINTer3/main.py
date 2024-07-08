@@ -2,7 +2,9 @@ from qPAINTER_v3 import *
 
 Measurement = qPAINT('/.../...cell1_dbscan_SBS.hdf5', # file containing single binding sites.hdf5
                    '/.../...cell1_dbscan.hdf5') # file containing clusters to be counted.hdf5
-Measurement.Start()
+Measurement.Load()
+Measurement.Filter(10000, 2, showplot=True)
+Measurement.Calculate()
 Measurement.SaveLargeClusters(10, '/.../name') # path to where results should be saved/name
 Measurement.SaveCSV('/.../name') # path to where results should be saved/name
 
